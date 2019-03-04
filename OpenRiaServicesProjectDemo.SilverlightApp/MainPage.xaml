@@ -10,9 +10,15 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Button x:Name="ExecuteQueryButton" Grid.Row="0" Click="ExecuteQueryButton_Click">Run Query</Button>
-        <Button x:Name="ExecuteCustomMethodButton" Grid.Row="1" Click="ExecuteCustomMethodButton_Click">Invoke Custom Method</Button>
+        <Button x:Name="ExecuteCustomMethodButton" Grid.Row="1" Click="ExecuteCustomMethodButton_Click" Margin="0,5,0,0">Invoke Custom Method</Button>
+        <Button x:Name="InsertRecordButton" Grid.Row="2" Click="InsertRecordButton_Click" Margin="0,5,0,0">Insert Record</Button>
+        <Button x:Name="UpdateRecordButton" Grid.Row="3" Click="UpdateRecordButton_Click" Margin="0,5,0,0">Update Record</Button>
+        <Button x:Name="DeleteRecordButton" Grid.Row="4" Click="DeleteRecordButton_Click" Margin="0,5,0,0">Delete Record</Button>
     </Grid>
 </UserControl>

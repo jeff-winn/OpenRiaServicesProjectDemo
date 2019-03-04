@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using OpenRiaServicesProjectDemo.Domain;
 
 namespace OpenRiaServicesProjectDemo.Controllers
 {

@@ -15,6 +15,29 @@ namespace OpenRiaServicesProjectDemo.Services
             return DbContext.AppTables;
         }
 
+        public void InsertAppTable(AppTable appTable)
+        {
+            DbContext.AppTables.Add(appTable);
+        }
+
+        public void DeleteAppTable(AppTable appTable)
+        {
+            if (DbContext.Entry(appTable).State != System.Data.Entity.EntityState.Detached)
+            {
+                DbContext.Entry(appTable).State = System.Data.Entity.EntityState.Deleted;
+            }
+            else
+            {
+                DbContext.AppTables.Attach(appTable);
+                DbContext.AppTables.Remove(appTable);
+            }
+        }
+
+        public void UpdateAppTable(AppTable appTable)
+        {
+            DbContext.AppTables.AttachAsModified(appTable, ChangeSet.GetOriginal(appTable), DbContext);
+        }
+
         [Invoke]
         public bool ExecuteCustomMethod(string value)
         {

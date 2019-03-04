@@ -110,6 +110,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\OpenRiaServiceProjectDemo.mdf" />
+    <Content Include="App_Data\OpenRiaServiceProjectDemo_log.ldf">
+      <DependentUpon>OpenRiaServiceProjectDemo.mdf</DependentUpon>
+    </Content>
     <Content Include="ClientBin\OpenRiaServicesProjectDemo.SilverlightApp.xap" />
     <Content Include="Global.asax" />
     <Content Include="Silverlight.js" />
@@ -138,7 +142,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
